@@ -75,44 +75,47 @@
       font-family: 'Fredoka', cursive, sans-serif;
       font-size: 2.25rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    #md-content .toy-section-card {
+      background: var(--tb-paper);
+      border: 3px solid #000000;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 4px 4px 0px #000000;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     #md-content h2, #md-content h3, #md-content h4 {
       font-family: 'Fredoka', cursive, sans-serif;
       font-weight: 700;
       color: #000000;
-      margin-top: 1.5rem;
       margin-bottom: 0.6rem;
     }
 
     #md-content h2 { font-size: 1.5rem; }
-    #md-content h3 { font-size: 1.3rem; }
-    #md-content h4 { font-size: 1.15rem; }
+    #md-content h3 { font-size: 1.35rem; }
+    #md-content h4 { font-size: 1.15rem; margin-top: 1rem; }
 
     #md-content p {
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
     }
 
     #md-content ul, #md-content ol {
       padding-left: 1.4rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
     }
 
     #md-content li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     #md-content a {
       color: var(--tb-blue);
       font-weight: 700;
-    }
-
-    #md-content hr {
-      border: none;
-      border-top: 3px solid #000000;
-      margin: 1.75rem 0;
     }
 
     footer {
@@ -140,37 +143,29 @@
   </div>
 
   <script>
-    // Fallback Markdown parser in case marked.js CDN is slow or blocked
-    function simpleMarkdownParse(md) {
-      return md
-        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-        .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-        .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-        .replace(/^\*\* (.*$)/gim, '<strong>$1</strong>')
-        .replace(/^\* (.*$)/gim, '<ul><li>$1</li></ul>')
-        .replace(/<\/ul>\s*<ul>/g, '')
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em>$1</em>')
-        .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-        .replace(/^---$/gim, '<hr>')
-        .replace(/\n\n/g, '<p></p>');
-    }
-
-    fetch('PRIVACY_POLICY.md')
+    // Fetch PRIVACY_POLICY.md with cache buster Date.now()
+    fetch('PRIVACY_POLICY.md?v=' + Date.now())
       .then(response => {
         if (!response.ok) throw new Error('File not found');
         return response.text();
       })
       .then(mdText => {
         const container = document.getElementById('md-content');
-        if (typeof marked !== 'undefined') {
-          container.innerHTML = marked.parse(mdText);
-        } else {
-          container.innerHTML = simpleMarkdownParse(mdText);
-        }
+        let rawHtml = typeof marked !== 'undefined' ? marked.parse(mdText) : mdText;
+        
+        // Wrap sections into Toybox Cards dynamically
+        // Split by <h3> or <h2> headers so all 8 sections get formatted into individual Toybox cards
+        let parts = rawHtml.split(/(?=<h[23]>)/i);
+        let formatted = parts.map((part, index) => {
+          if (index === 0) return part; // Header title & description
+          if (part.trim().startsWith('<hr>') || part.trim() === '') return '';
+          return '<div class="toy-section-card">' + part.replace('<hr>', '') + '</div>';
+        }).join('');
+
+        container.innerHTML = formatted;
       })
       .catch(err => {
-        document.getElementById('md-content').innerHTML = '<p>Error loading Privacy Policy. Please try again later.</p>';
+        document.getElementById('md-content').innerHTML = '<p>Error loading Privacy Policy. Please refresh the page.</p>';
       });
   </script>
 </body>
