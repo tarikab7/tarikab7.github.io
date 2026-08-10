@@ -6,26 +6,33 @@
   <title>Terms of Use - Multi-Minigames</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
       --tb-paper: #FAF1E0;
+      --tb-paper-deep: #E5D5B7;
       --tb-cloud: #FFFBF2;
-      --tb-ink: #3D3A34;
-      --tb-ink-muted: #6A6458;
+      --tb-black: #000000;
+      --tb-ink-muted: #555048;
       --tb-lemon: #FFD335;
       --tb-blue: #4D9DE8;
-      --tb-stroke: 3px solid #3D3A34;
-      --tb-shadow: 5px 5px 0px #3D3A34;
+      
+      --tb-stroke: 4px solid #000000;
+      --tb-shadow-card: 8px 8px 0px #000000;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Fredoka', cursive, sans-serif;
       background-color: var(--tb-paper);
-      color: var(--tb-ink);
-      line-height: 1.6;
+      background-image: 
+        radial-gradient(var(--tb-paper-deep) 22%, transparent 22%),
+        radial-gradient(var(--tb-paper-deep) 22%, transparent 22%);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+      color: var(--tb-black);
+      line-height: 1.65;
       padding: 2rem 1rem;
       min-height: 100vh;
     }
@@ -35,73 +42,78 @@
       margin: 0 auto;
       background: var(--tb-cloud);
       border: var(--tb-stroke);
-      border-radius: 24px;
+      border-radius: 28px;
       padding: 2.5rem 2rem;
-      box-shadow: var(--tb-shadow);
+      box-shadow: var(--tb-shadow-card);
     }
 
     a.back-btn {
-      font-family: 'Fredoka', sans-serif;
+      font-family: 'Fredoka', cursive, sans-serif;
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       background: var(--tb-paper);
-      color: var(--tb-ink);
+      color: var(--tb-black);
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 1rem;
       text-decoration: none;
-      border: 2px solid var(--tb-ink);
-      border-radius: 12px;
-      box-shadow: 2px 2px 0px var(--tb-ink);
-      margin-bottom: 1.5rem;
+      border: 3px solid #000000;
+      border-radius: 16px;
+      box-shadow: 4px 4px 0px #000000;
+      margin-bottom: 1.75rem;
+      transition: all 0.1s ease;
     }
 
     a.back-btn:hover {
       background: var(--tb-lemon);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px #000000;
     }
 
     h1 {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 2rem;
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
       margin-bottom: 0.25rem;
     }
 
     .updated {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: var(--tb-ink-muted);
-      margin-bottom: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
     }
 
     .section {
       background: var(--tb-paper);
-      border: 2px solid var(--tb-ink);
-      border-radius: 16px;
-      padding: 1.25rem 1.5rem;
-      box-shadow: 3px 3px 0px var(--tb-ink);
-      margin-bottom: 1.25rem;
+      border: 3px solid #000000;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 4px 4px 0px #000000;
+      margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
     }
 
     p, ul {
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 0.75rem;
     }
 
-    ul { padding-left: 1.2rem; }
+    ul { padding-left: 1.3rem; }
     li { margin-bottom: 0.4rem; }
-    a { color: var(--tb-blue); }
+    a { color: var(--tb-blue); font-weight: 700; }
 
     footer {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: var(--tb-ink-muted);
       margin-top: 2rem;
       text-align: center;
+      font-weight: 600;
     }
   </style>
 </head>

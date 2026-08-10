@@ -6,20 +6,24 @@
   <title>Multi-Minigames: 1v1 Offline Battles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
       --tb-paper: #FAF1E0;
+      --tb-paper-deep: #E5D5B7;
       --tb-cloud: #FFFBF2;
-      --tb-ink: #3D3A34;
-      --tb-ink-muted: #6A6458;
+      --tb-black: #000000;
+      --tb-ink-muted: #555048;
+      
       --tb-sun: #FFA51F;
       --tb-grass: #78BE4C;
       --tb-blue: #4D9DE8;
       --tb-lemon: #FFD335;
-      --tb-stroke: 3px solid #3D3A34;
-      --tb-shadow: 5px 5px 0px #3D3A34;
-      --tb-shadow-btn: 3px 3px 0px #3D3A34;
+      
+      /* Thicker Black Outlines & Hard Shadows */
+      --tb-stroke: 4px solid #000000;
+      --tb-shadow-card: 8px 8px 0px #000000;
+      --tb-shadow-btn: 5px 5px 0px #000000;
     }
 
     * {
@@ -29,9 +33,14 @@
     }
 
     body {
-      font-family: 'Fredoka', 'Inter', sans-serif;
+      font-family: 'Fredoka', cursive, sans-serif;
       background-color: var(--tb-paper);
-      color: var(--tb-ink);
+      background-image: 
+        radial-gradient(var(--tb-paper-deep) 22%, transparent 22%),
+        radial-gradient(var(--tb-paper-deep) 22%, transparent 22%);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+      color: var(--tb-black);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -41,58 +50,55 @@
     }
 
     .main-card {
-      max-width: 540px;
+      max-width: 520px;
       width: 100%;
       background: var(--tb-cloud);
       border: var(--tb-stroke);
-      border-radius: 24px;
+      border-radius: 28px;
       padding: 2.5rem 2rem;
-      box-shadow: var(--tb-shadow);
+      box-shadow: var(--tb-shadow-card);
       text-align: center;
     }
 
-    .app-icon {
-      font-size: 3.5rem;
-      margin-bottom: 0.75rem;
-      display: inline-block;
-    }
-
     h1 {
-      font-size: 2.1rem;
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 2.5rem;
       font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 0.4rem;
+      line-height: 1.15;
+      margin-bottom: 0.3rem;
+      color: var(--tb-black);
+      letter-spacing: 0.5px;
     }
 
     p.developer {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       color: var(--tb-ink-muted);
-      font-weight: 500;
-      margin-bottom: 2rem;
+      font-weight: 600;
+      margin-bottom: 2.25rem;
     }
 
     .links-grid {
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 1.1rem;
       margin-bottom: 2rem;
     }
 
     a.link-btn {
+      font-family: 'Fredoka', cursive, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.6rem;
-      padding: 0.9rem 1.2rem;
-      font-size: 1.05rem;
+      padding: 1.05rem 1.4rem;
+      font-size: 1.2rem;
       font-weight: 700;
       text-decoration: none;
-      border-radius: 16px;
+      border-radius: 20px;
       border: var(--tb-stroke);
       box-shadow: var(--tb-shadow-btn);
       transition: all 0.1s ease;
       cursor: pointer;
+      letter-spacing: 0.5px;
     }
 
     a.btn-play {
@@ -102,12 +108,12 @@
 
     a.btn-privacy {
       background: var(--tb-sun);
-      color: var(--tb-ink);
+      color: #000000;
     }
 
     a.btn-terms {
       background: var(--tb-lemon);
-      color: var(--tb-ink);
+      color: #000000;
     }
 
     a.btn-ads {
@@ -116,47 +122,47 @@
     }
 
     a.link-btn:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 5px 5px 0px var(--tb-ink);
+      transform: translate(-3px, -3px);
+      box-shadow: 8px 8px 0px #000000;
     }
 
     a.link-btn:active {
       transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0px var(--tb-ink);
+      box-shadow: 2px 2px 0px #000000;
     }
 
     footer {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: var(--tb-ink-muted);
       margin-top: 1rem;
+      font-weight: 600;
     }
 
     footer a {
-      color: var(--tb-ink);
+      color: var(--tb-black);
       text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
   </style>
 </head>
 <body>
 
   <div class="main-card">
-    <div class="app-icon">🎮</div>
     <h1>Multi-Minigames</h1>
-    <p class="developer">1v1 Offline Battles &bull; By Seyhan Tarik Akgöz</p>
+    <p class="developer">1v1 Offline Battles by Seyhan Tarik Akgöz</p>
 
     <div class="links-grid">
       <a href="https://play.google.com/store/apps/details?id=com.tarik.multiminigames" target="_blank" rel="noopener" class="link-btn btn-play">
-        <span>▶</span> Google Play Store
+        Google Play Store
       </a>
       <a href="privacy-policy.html" class="link-btn btn-privacy">
-        <span>🔒</span> Privacy Policy
+        Privacy Policy
       </a>
       <a href="terms.html" class="link-btn btn-terms">
-        <span>📜</span> Terms of Use
+        Terms of Use
       </a>
       <a href="app-ads.txt" class="link-btn btn-ads">
-        <span>📄</span> app-ads.txt
+        app-ads.txt
       </a>
     </div>
 
