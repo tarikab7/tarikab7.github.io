@@ -3,35 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Minigames: 1v1 Offline Battles | Seyhan Tarik Akgöz</title>
-  <meta name="description" content="Official website and developer portal for Multi-Minigames: 1v1 Offline Battles - Play 1v1 minigames offline with local P2P voice chat and custom audio effects.">
+  <title>Multi-Minigames: 1v1 Offline Battles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Toybox Neutrals */
       --tb-paper: #FAF1E0;
-      --tb-paper-deep: #F0E4CB;
       --tb-cloud: #FFFBF2;
       --tb-ink: #3D3A34;
       --tb-ink-muted: #6A6458;
-      --tb-ink-faint: #D8CDB4;
-      --tb-white: #FFFFFF;
-
-      /* Toybox Brand & Accents */
       --tb-sun: #FFA51F;
-      --tb-red: #F35E5A;
-      --tb-blue: #4D9DE8;
       --tb-grass: #78BE4C;
+      --tb-blue: #4D9DE8;
       --tb-lemon: #FFD335;
-      --tb-sky: #5AC8E8;
-      
-      /* Toybox Shadows & Borders */
-      --tb-stroke: 3px solid var(--tb-ink);
-      --tb-shadow-card: 6px 6px 0px var(--tb-ink);
-      --tb-shadow-btn: 4px 4px 0px var(--tb-ink);
-      --tb-shadow-badge: 3px 3px 0px var(--tb-ink);
+      --tb-stroke: 3px solid #3D3A34;
+      --tb-shadow: 5px 5px 0px #3D3A34;
+      --tb-shadow-btn: 3px 3px 0px #3D3A34;
     }
 
     * {
@@ -43,345 +31,138 @@
     body {
       font-family: 'Fredoka', 'Inter', sans-serif;
       background-color: var(--tb-paper);
-      background-image: 
-        radial-gradient(var(--tb-paper-deep) 15%, transparent 16%),
-        radial-gradient(var(--tb-paper-deep) 15%, transparent 16%);
-      background-size: 32px 32px;
-      background-position: 0 0, 16px 16px;
       color: var(--tb-ink);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 2rem 1rem;
-      overflow-x: hidden;
     }
 
-    /* Container Card */
-    .toy-wrapper {
-      max-width: 860px;
+    .main-card {
+      max-width: 540px;
       width: 100%;
-    }
-
-    .toy-hero-card {
       background: var(--tb-cloud);
       border: var(--tb-stroke);
       border-radius: 24px;
-      padding: 3rem 2.5rem;
-      box-shadow: var(--tb-shadow-card);
-      position: relative;
+      padding: 2.5rem 2rem;
+      box-shadow: var(--tb-shadow);
+      text-align: center;
     }
 
-    /* Top Navigation Bar */
-    .toy-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 2px solid var(--tb-ink-faint);
-    }
-
-    .dev-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--tb-lemon);
-      border: 2.5px solid var(--tb-ink);
-      box-shadow: var(--tb-shadow-badge);
-      border-radius: 99px;
-      padding: 0.4rem 1.1rem;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--tb-ink);
-    }
-
-    .toy-nav-links {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-link {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--tb-ink);
-      text-decoration: none;
-      padding: 0.4rem 0.9rem;
-      background: var(--tb-paper);
-      border: 2px solid var(--tb-ink);
-      border-radius: 12px;
-      box-shadow: 2px 2px 0px var(--tb-ink);
-      transition: all 0.1s ease;
-    }
-
-    .nav-link:hover {
-      background: var(--tb-lemon);
-      transform: translate(-1px, -1px);
-      box-shadow: 3px 3px 0px var(--tb-ink);
-    }
-
-    /* Main Title & Subtitle */
-    h1.hero-title {
-      font-size: 2.75rem;
-      font-weight: 700;
-      line-height: 1.15;
-      color: var(--tb-ink);
+    .app-icon {
+      font-size: 3.5rem;
       margin-bottom: 0.75rem;
-    }
-
-    h1.hero-title span.sun-highlight {
-      background: var(--tb-sun);
-      padding: 0.1rem 0.6rem;
-      border-radius: 12px;
-      border: 2px solid var(--tb-ink);
-      box-shadow: 3px 3px 0px var(--tb-ink);
       display: inline-block;
     }
 
-    p.subtitle {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
-      color: var(--tb-ink-muted);
-      font-weight: 500;
-      line-height: 1.6;
-      margin-bottom: 2.25rem;
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
     }
 
-    /* Toy Showcase Section */
-    .game-sticker-box {
-      background: var(--tb-paper);
-      border: var(--tb-stroke);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 4px 4px 0px var(--tb-ink);
+    p.developer {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--tb-ink-muted);
+      font-weight: 500;
       margin-bottom: 2rem;
     }
 
-    .game-header {
+    .links-grid {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 2rem;
     }
 
-    .game-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--tb-ink);
+    a.link-btn {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.6rem;
-    }
-
-    .status-chip {
-      background: var(--tb-grass);
-      color: var(--tb-white);
-      border: 2px solid var(--tb-ink);
-      box-shadow: 2px 2px 0px var(--tb-ink);
-      border-radius: 99px;
-      padding: 0.25rem 0.8rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .game-desc {
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      color: var(--tb-ink);
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Feature Chips */
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.85rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .feat-card {
-      background: var(--tb-cloud);
-      border: 2px solid var(--tb-ink);
-      border-radius: 14px;
-      padding: 0.85rem 1rem;
-      box-shadow: 3px 3px 0px var(--tb-ink);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .feat-icon {
-      font-size: 1.3rem;
-    }
-
-    /* Toy Buttons */
-    .toy-btn-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    a.toy-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.6rem;
-      font-size: 1rem;
+      padding: 0.9rem 1.2rem;
+      font-size: 1.05rem;
       font-weight: 700;
       text-decoration: none;
       border-radius: 16px;
       border: var(--tb-stroke);
       box-shadow: var(--tb-shadow-btn);
-      transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.1s ease;
       cursor: pointer;
-      user-select: none;
     }
 
-    a.toy-btn-green {
+    a.btn-play {
       background: var(--tb-grass);
-      color: var(--tb-white);
+      color: #ffffff;
     }
 
-    a.toy-btn-sun {
+    a.btn-privacy {
       background: var(--tb-sun);
       color: var(--tb-ink);
     }
 
-    a.toy-btn-cloud {
-      background: var(--tb-cloud);
+    a.btn-terms {
+      background: var(--tb-lemon);
       color: var(--tb-ink);
     }
 
-    a.toy-btn:hover {
+    a.btn-ads {
+      background: var(--tb-blue);
+      color: #ffffff;
+    }
+
+    a.link-btn:hover {
       transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0px var(--tb-ink);
+      box-shadow: 5px 5px 0px var(--tb-ink);
     }
 
-    a.toy-btn:active {
+    a.link-btn:active {
       transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0px var(--tb-ink);
+      box-shadow: 1px 1px 0px var(--tb-ink);
     }
 
-    /* Footer */
-    footer.toy-footer {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 2px solid var(--tb-ink-faint);
-      text-align: center;
+    footer {
       font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--tb-ink-muted);
-      font-weight: 600;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
+      margin-top: 1rem;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    footer.toy-footer a {
+    footer a {
       color: var(--tb-ink);
       text-decoration: underline;
-      text-decoration-thickness: 2px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .toy-hero-card { padding: 2rem 1.5rem; }
-      h1.hero-title { font-size: 2rem; }
-      .game-sticker-box { padding: 1.25rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="toy-wrapper">
-    <!-- Main ToyCard Container -->
-    <div class="toy-hero-card">
-      
-      <!-- Top Navigation -->
-      <nav class="toy-nav">
-        <div class="dev-badge">
-          <span>✨ Developer Portal</span>
-        </div>
-        <div class="toy-nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-          <a href="app-ads.txt" class="nav-link">app-ads.txt</a>
-        </div>
-      </nav>
+  <div class="main-card">
+    <div class="app-icon">🎮</div>
+    <h1>Multi-Minigames</h1>
+    <p class="developer">1v1 Offline Battles &bull; By Seyhan Tarik Akgöz</p>
 
-      <h1 class="hero-title">
-        Seyhan Tarik Akgöz <br>
-        <span class="sun-highlight">Mobile Game Studio</span>
-      </h1>
-
-      <p class="subtitle">
-        Creating tactile, high-performance offline P2P multiplayer minigames with real-time audio modulation and playful Toybox aesthetics.
-      </p>
-
-      <!-- Featured App Card -->
-      <div class="game-sticker-box">
-        <div class="game-header">
-          <div class="game-title">
-            <span>🕹️</span> Multi-Minigames: 1v1 Offline Battles
-          </div>
-          <div class="status-chip">Android App</div>
-        </div>
-
-        <p class="game-desc">
-          A zero-latency local multiplayer hub featuring classic 1v1 duels (Mancala, Backgammon, Football, Paintball, Runner & Draw Duel), built-in offline P2P voice chat with live DSP voice filters, and local stats tracking.
-        </p>
-
-        <!-- Feature Badges -->
-        <div class="feature-grid">
-          <div class="feat-card"><span class="feat-icon">📡</span> Offline P2P Local Mesh</div>
-          <div class="feat-card"><span class="feat-icon">🎙️</span> On-Device DSP Voice Chat</div>
-          <div class="feat-card"><span class="feat-icon">🎨</span> Tactile Toybox UI</div>
-          <div class="feat-card"><span class="feat-icon">🏆</span> Gamified Solo & P2P Stats</div>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="toy-btn-group">
-          <a href="https://play.google.com/store/apps/details?id=com.tarik.multiminigames" target="_blank" rel="noopener" class="toy-btn toy-btn-green">
-            <span>▶</span> Get it on Google Play
-          </a>
-          <a href="privacy-policy.html" class="toy-btn toy-btn-sun">
-            <span>🔒</span> Privacy Policy
-          </a>
-          <a href="app-ads.txt" class="toy-btn toy-btn-cloud">
-            <span>📄</span> app-ads.txt
-          </a>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer class="toy-footer">
-        <div class="footer-links">
-          <a href="index.html">Home</a> &bull;
-          <a href="privacy-policy.html">Privacy Policy</a> &bull;
-          <a href="app-ads.txt">app-ads.txt</a> &bull;
-          <a href="mailto:studio@tarikakgoz.com">Contact Developer</a>
-        </div>
-        <p>© 2026 Seyhan Tarik Akgöz &bull; Email: studio@tarikakgoz.com</p>
-      </footer>
-
+    <div class="links-grid">
+      <a href="https://play.google.com/store/apps/details?id=com.tarik.multiminigames" target="_blank" rel="noopener" class="link-btn btn-play">
+        <span>▶</span> Google Play Store
+      </a>
+      <a href="privacy-policy.html" class="link-btn btn-privacy">
+        <span>🔒</span> Privacy Policy
+      </a>
+      <a href="terms.html" class="link-btn btn-terms">
+        <span>📜</span> Terms of Use
+      </a>
+      <a href="app-ads.txt" class="link-btn btn-ads">
+        <span>📄</span> app-ads.txt
+      </a>
     </div>
+
+    <footer>
+      <p>© 2026 Seyhan Tarik Akgöz &bull; Contact: <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></p>
+    </footer>
   </div>
 
 </body>
