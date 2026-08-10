@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Multi-Minigames</title>
+  <title>Privacy Policy - Multi-Minigames: 1v1 Offline Battles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
     }
 
     .container {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
       background: var(--tb-cloud);
       border: var(--tb-stroke);
@@ -92,11 +92,21 @@
       margin-bottom: 1.5rem;
     }
 
-    h2 {
+    h2, h3 {
       font-family: 'Fredoka', cursive, sans-serif;
-      font-size: 1.35rem;
       font-weight: 700;
+      color: #000000;
+    }
+
+    h2 {
+      font-size: 1.35rem;
       margin-bottom: 0.6rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
     }
 
     p, ul {
@@ -105,7 +115,7 @@
     }
 
     ul { padding-left: 1.3rem; }
-    li { margin-bottom: 0.4rem; }
+    li { margin-bottom: 0.5rem; }
     a { color: var(--tb-blue); font-weight: 700; }
 
     footer {
@@ -121,32 +131,108 @@
 
   <div class="container">
     <a href="index.html" class="back-btn">&larr; Back to Home</a>
-    <h1>Privacy Policy</h1>
+    <h1>Privacy Policy for Multi-Minigames: 1v1 Offline Battles</h1>
     <div class="updated">Last Updated: May 31, 2026</div>
 
-    <p>This Privacy Policy describes how we collect, use, process, and protect your information when you use "Multi-Minigames: 1v1 Offline Battles".</p>
+    <p>This Privacy Policy describes how we collect, use, process, and protect your information when you download, install, and use the mobile application "Multi-Minigames: 1v1 Offline Battles" ("the App").</p>
 
+    <!-- 1. Data Controller -->
     <div class="section">
       <h2>1. Data Controller</h2>
-      <p>Developer: Seyhan Tarik Akgöz &bull; Email: <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></p>
-    </div>
-
-    <div class="section">
-      <h2>2. Data Collection & Usage</h2>
+      <p>The Data Controller responsible for the processing of your personal information in connection with the App is:</p>
       <ul>
-        <li><strong>Local P2P Voice & Nearby Connections:</strong> Handled locally on-device during 1v1 matches. Voice recordings are transmitted directly to your opponent without being stored on external servers.</li>
-        <li><strong>Advertising & Analytics:</strong> Third-party SDKs (Google AdMob, Firebase) process device identifiers for ads and crash diagnostics. See our <a href="app-ads.txt">app-ads.txt</a>.</li>
+        <li><strong>Developer:</strong> Seyhan Tarik Akgöz</li>
+        <li><strong>Contact Email:</strong> <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></li>
       </ul>
     </div>
 
+    <!-- 2. Information Collection and Processing -->
     <div class="section">
-      <h2>3. Children's Privacy</h2>
-      <p>The App does not knowingly collect personal data from children under 13.</p>
+      <h2>2. Information Collection and Processing</h2>
+      <p>The App is designed primarily as a local, offline peer-to-peer (P2P) multiplayer gaming hub. We are committed to minimizing data collection to respect your privacy.</p>
+
+      <h3>A. Data Processed Locally (P2P Offline Infrastructure)</h3>
+      <p>To facilitate real-time multiplayer functionality without internet dependency, the App utilizes local hardware capabilities.</p>
+      <ul>
+        <li><strong>Local Microphone (RECORD_AUDIO):</strong> The App uses your device's microphone to allow recording and sending voice messages to your opponent during local P2P matches. 
+          <br><em>Storage & Processing:</em> Audio recordings are encoded, processed locally on-device, and transmitted directly to the other player via P2P. We <strong>do not</strong> store, listen to, or transmit your voice data to any external developer-owned or third-party servers.</li>
+        <li><strong>Nearby Connections API:</strong> To discover and connect to nearby devices, the App uses Google's Nearby Connections API. This requires local device permissions for Bluetooth, Wi-Fi, and Location (which is required by the Android operating system to perform local radio scans).
+          <br><em>Storage & Processing:</em> Connection information and player names are shared locally between matching devices only. This data is handled in memory on-device and is never transmitted to us or stored externally.</li>
+      </ul>
+
+      <h3>B. Data Processed by Third-Party Services (Advertising & Diagnostics)</h3>
+      <p>To support the ongoing development, performance optimization, and monetization of the App, we integrate secure third-party services provided by Google:</p>
+      <ul>
+        <li><strong>Google AdMob:</strong> AdMob may collect and process device-level identifiers (such as the Android Advertising ID), cookies, IP addresses, and interaction history with ads for analytics and targeting.</li>
+        <li><strong>Google Firebase (Analytics & Crashlytics):</strong> To monitor and improve App stability, performance, and user engagement, we utilize the Google Firebase SDK.
+          <ul>
+            <li><em>Firebase Crashlytics:</em> Automatically collects anonymous crash reports, stack traces, and device telemetry (such as device model, OS version, RAM capacity, and battery level) whenever the App crashes in the wild.</li>
+            <li><em>Firebase Analytics:</em> Collects anonymous, aggregated usage statistics (such as screen transitions, active game sessions, and feature engagement metrics). This data contains no personally identifiable information (PII).</li>
+          </ul>
+        </li>
+        <li><strong>Consent Management (UMP SDK):</strong> For users residing in the European Economic Area (EEA), the United Kingdom, and other regulated regions, we implement the Google User Messaging Platform (UMP) SDK. Upon the first launch of the App, you will be presented with an interactive consent panel allowing you to choose whether to accept personalized advertising.</li>
+      </ul>
+      <p>To learn more about how Google handles and protects your data, please review: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's Privacy & Terms</a>.</p>
     </div>
 
+    <!-- 3. Legal Bases for Processing (GDPR Compliance) -->
     <div class="section">
-      <h2>4. Contact</h2>
-      <p>If you have questions, reach out to: <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></p>
+      <h2>3. Legal Bases for Processing (GDPR Compliance)</h2>
+      <p>If you reside in the European Economic Area (EEA) or the United Kingdom, we process any personal data under the following legal bases of the General Data Protection Regulation (GDPR):</p>
+      <ul>
+        <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For the serving of personalized advertisements through Google AdMob, where you have explicitly opted in via our consent dialog. You have the right to withdraw this consent at any time.</li>
+        <li><strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> For establishing and maintaining local P2P matches (e.g., audio and device connection transmissions) that you request when initiating a local game.</li>
+        <li><strong>Legitimate Interests (Art. 6(1)(f) GDPR):</strong> For rendering basic, non-personalized ads, analyzing anonymized usage diagnostics, and preventing fraudulent billing practices.</li>
+      </ul>
+    </div>
+
+    <!-- 4. California Privacy Rights (CCPA / CPRA Compliance) -->
+    <div class="section">
+      <h2>4. California Privacy Rights (CCPA / CPRA Compliance)</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the CPRA, grants you specific rights:</p>
+      <ul>
+        <li><strong>Categories of Information Collected:</strong> In the preceding 12 months, third-party services integrated within the App (Google AdMob) may have collected identifiers (e.g., IP address, device ad ID) and internet/electronic network activity.</li>
+        <li><strong>Sale or Sharing of Personal Information:</strong> We do not directly sell your personal data. However, sharing device identifiers with advertising networks for personalized advertising may be classified as a "sale" or "sharing" under California law.</li>
+        <li><strong>Opt-Out Right:</strong> You can opt-out of personalized tracking at any time by accessing the in-app privacy settings form, or by utilizing device-level privacy settings (such as enabling "Opt out of Ads Personalization" or "Delete Advertising ID" on your Android device).</li>
+      </ul>
+    </div>
+
+    <!-- 5. Your Rights as a Data Subject -->
+    <div class="section">
+      <h2>5. Your Rights as a Data Subject</h2>
+      <p>Depending on your geographical location (e.g., GDPR/CCPA jurisdictions), you hold the following rights:</p>
+      <ul>
+        <li><strong>Right of Access & Portability:</strong> Request details about the data we or our partners collect.</li>
+        <li><strong>Right to Rectification:</strong> Request corrections to inaccurate information.</li>
+        <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete).</li>
+        <li><strong>Right to Withdraw Consent:</strong> Revoke your ad-tracking consent at any time via the UMP consent form in the App settings.</li>
+        <li><strong>Right to Lodge a Complaint:</strong> You have the right to contact or lodge a complaint with your local Data Protection Authority.</li>
+      </ul>
+    </div>
+
+    <!-- 6. Children's Privacy (COPPA & Play Store Families Policy) -->
+    <div class="section">
+      <h2>6. Children's Privacy (COPPA & Play Store Families Policy)</h2>
+      <p>The App is not directed at children under the age of 13 (or the legal age of consent in your jurisdiction). We do not knowingly collect personal data from children.</p>
+      <ul>
+        <li>If we discover that a child under 13 has provided us with personal information (though none is collected directly by our servers), we will immediately take steps to ensure compliance.</li>
+        <li>In full compliance with Google Play Developer policies, the advertising SDK is configured to restrict personalized data collection for users known to be under the age of consent.</li>
+      </ul>
+    </div>
+
+    <!-- 7. Changes to This Privacy Policy -->
+    <div class="section">
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect operational or regulatory changes. We will notify you of any modifications by updating the "Last Updated" date at the top of this policy. You are encouraged to review this page periodically.</p>
+    </div>
+
+    <!-- 8. Contact Us -->
+    <div class="section">
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding your privacy, please reach out to us at:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></li>
+      </ul>
     </div>
 
     <footer>
