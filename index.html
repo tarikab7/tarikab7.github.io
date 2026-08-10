@@ -74,7 +74,21 @@
       font-size: 1.1rem;
       color: var(--tb-ink-muted);
       font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Subtle Info Text for app-ads.txt */
+    p.info-text {
+      font-size: 0.95rem;
+      color: var(--tb-ink-muted);
+      font-weight: 500;
       margin-bottom: 2.25rem;
+    }
+
+    p.info-text a {
+      color: var(--tb-blue);
+      text-decoration: underline;
+      font-weight: 700;
     }
 
     .links-grid {
@@ -116,11 +130,6 @@
       color: #000000;
     }
 
-    a.btn-ads {
-      background: var(--tb-blue);
-      color: #ffffff;
-    }
-
     a.link-btn:hover {
       transform: translate(-3px, -3px);
       box-shadow: 8px 8px 0px #000000;
@@ -150,6 +159,7 @@
   <div class="main-card">
     <h1>Multi-Minigames</h1>
     <p class="developer">1v1 Offline Battles by Seyhan Tarik Akgöz</p>
+    <p class="info-text">Developer Verification: <a href="app-ads.txt">app-ads.txt</a></p>
 
     <div class="links-grid">
       <a href="https://play.google.com/store/apps/details?id=com.tarik.multiminigames" target="_blank" rel="noopener" class="link-btn btn-play">
@@ -160,9 +170,6 @@
       </a>
       <a href="terms.html" class="link-btn btn-terms">
         Terms of Use
-      </a>
-      <a href="app-ads.txt" class="link-btn btn-ads">
-        app-ads.txt
       </a>
     </div>
 
