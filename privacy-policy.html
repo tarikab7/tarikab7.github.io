@@ -151,15 +151,18 @@
       })
       .then(mdText => {
         const container = document.getElementById('md-content');
-        let rawHtml = typeof marked !== 'undefined' ? marked.parse(mdText) : mdText;
         
-        // Wrap sections into Toybox Cards dynamically
-        // Split by <h3> or <h2> headers so all 8 sections get formatted into individual Toybox cards
+        // Remove markdown horizontal rules (---) before parsing
+        let cleanMd = mdText.replace(/^---$/gim, '');
+        let rawHtml = typeof marked !== 'undefined' ? marked.parse(cleanMd) : cleanMd;
+        
+        // Split by <h3> or <h2> headings to format all 8 sections into individual Toybox cards
         let parts = rawHtml.split(/(?=<h[23]>)/i);
         let formatted = parts.map((part, index) => {
-          if (index === 0) return part; // Header title & description
-          if (part.trim().startsWith('<hr>') || part.trim() === '') return '';
-          return '<div class="toy-section-card">' + part.replace('<hr>', '') + '</div>';
+          let trimmed = part.trim();
+          if (index === 0) return trimmed; // Header title & intro text
+          if (!trimmed) return '';
+          return '<div class="toy-section-card">' + trimmed + '</div>';
         }).join('');
 
         container.innerHTML = formatted;
