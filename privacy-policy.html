@@ -24,7 +24,6 @@
       --tb-grass: #78BE4C;
       --tb-lemon: #FFD335;
       --tb-sky: #5AC8E8;
-      --tb-grape: #A57FDE;
       
       /* Toybox Shadows & Borders */
       --tb-stroke: 3px solid var(--tb-ink);
@@ -48,7 +47,7 @@
       background-position: 0 0, 16px 16px;
       color: var(--tb-ink);
       line-height: 1.65;
-      padding: 2.5rem 1rem;
+      padding: 2rem 1rem;
       min-height: 100vh;
     }
 
@@ -57,33 +56,70 @@
       margin: 0 auto;
       background: var(--tb-cloud);
       border: var(--tb-stroke);
-      border-radius: 28px;
+      border-radius: 24px;
       padding: 3rem 2.5rem;
       box-shadow: var(--tb-shadow-card);
     }
 
-    /* Back Button */
+    /* Top Navigation Bar */
+    .toy-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid var(--tb-ink-faint);
+    }
+
     a.back-toy-btn {
       font-family: 'Fredoka', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.6rem 1.2rem;
+      padding: 0.5rem 1.1rem;
       background: var(--tb-paper);
       color: var(--tb-ink);
       font-weight: 700;
       font-size: 0.95rem;
       text-decoration: none;
       border: 2px solid var(--tb-ink);
-      border-radius: 14px;
-      box-shadow: 3px 3px 0px var(--tb-ink);
-      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 2px 2px 0px var(--tb-ink);
       transition: all 0.1s ease;
     }
 
     a.back-toy-btn:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 5px 5px 0px var(--tb-ink);
+      background: var(--tb-lemon);
+      transform: translate(-1px, -1px);
+      box-shadow: 3px 3px 0px var(--tb-ink);
+    }
+
+    .toy-nav-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--tb-ink);
+      text-decoration: none;
+      padding: 0.4rem 0.9rem;
+      background: var(--tb-paper);
+      border: 2px solid var(--tb-ink);
+      border-radius: 12px;
+      box-shadow: 2px 2px 0px var(--tb-ink);
+      transition: all 0.1s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--tb-lemon);
+      transform: translate(-1px, -1px);
+      box-shadow: 3px 3px 0px var(--tb-ink);
     }
 
     /* Headings */
@@ -111,7 +147,7 @@
     .section-card {
       background: var(--tb-paper);
       border: 2px solid var(--tb-ink);
-      border-radius: 20px;
+      border-radius: 18px;
       padding: 1.5rem;
       box-shadow: 4px 4px 0px var(--tb-ink);
       margin-bottom: 1.75rem;
@@ -158,10 +194,29 @@
 
     footer {
       margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--tb-ink-faint);
       text-align: center;
-      font-family: 'Fredoka', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       color: var(--tb-ink-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer a {
+      color: var(--tb-ink);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
 
     @media (max-width: 600px) {
@@ -173,9 +228,17 @@
 <body>
 
   <div class="policy-container">
-    <a href="index.html" class="back-toy-btn">
-      <span>&larr;</span> Back to Developer Home
-    </a>
+    <!-- Top Navigation -->
+    <nav class="toy-nav">
+      <a href="index.html" class="back-toy-btn">
+        <span>&larr;</span> Back to Home
+      </a>
+      <div class="toy-nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="app-ads.txt" class="nav-link">app-ads.txt</a>
+        <a href="https://play.google.com/store/apps/details?id=com.tarik.multiminigames" target="_blank" rel="noopener" class="nav-link">Google Play ↗</a>
+      </div>
+    </nav>
 
     <h1>Privacy Policy</h1>
     <div class="last-updated">Last Updated: May 31, 2026</div>
@@ -189,6 +252,7 @@
       <ul>
         <li><strong>Developer:</strong> Seyhan Tarik Akgöz</li>
         <li><strong>Contact Email:</strong> <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></li>
+        <li><strong>Developer Profile:</strong> <a href="https://github.com/tarikab7" target="_blank" rel="noopener">tarikab7 on GitHub</a></li>
       </ul>
     </div>
 
@@ -205,7 +269,7 @@
 
       <h3>B. Third-Party Services (Advertising & Diagnostics)</h3>
       <ul>
-        <li><strong>Google AdMob:</strong> May process device-level ad identifiers (Android Advertising ID) for ad analytics and targeting.</li>
+        <li><strong>Google AdMob:</strong> May process device-level ad identifiers (Android Advertising ID) for ad analytics and targeting. See <a href="app-ads.txt">app-ads.txt verification</a>.</li>
         <li><strong>Google Firebase (Analytics & Crashlytics):</strong> Collects anonymous crash telemetry and aggregated performance statistics to improve game stability.</li>
         <li><strong>Consent Management (UMP SDK):</strong> Presenting GDPR consent panels for users in the EEA & UK.</li>
       </ul>
@@ -230,6 +294,13 @@
     </div>
 
     <footer>
+      <div class="footer-links">
+        <a href="index.html">Home</a> &bull;
+        <a href="privacy-policy.html">Privacy Policy</a> &bull;
+        <a href="app-ads.txt">app-ads.txt</a> &bull;
+        <a href="https://github.com/tarikab7" target="_blank" rel="noopener">GitHub</a> &bull;
+        <a href="mailto:studio@tarikakgoz.com">Contact Developer</a>
+      </div>
       <p>© 2026 Seyhan Tarik Akgöz &bull; Multi-Minigames Studio</p>
     </footer>
   </div>

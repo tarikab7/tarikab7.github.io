@@ -21,21 +21,12 @@
 
       /* Toybox Brand & Accents */
       --tb-sun: #FFA51F;
-      --tb-sun-shade: #D9820B;
       --tb-red: #F35E5A;
-      --tb-red-shade: #C93B38;
       --tb-blue: #4D9DE8;
-      --tb-blue-shade: #2F72B8;
       --tb-grass: #78BE4C;
-      --tb-grass-shade: #55932F;
       --tb-lemon: #FFD335;
-      --tb-lemon-shade: #E0AE00;
       --tb-sky: #5AC8E8;
-      --tb-sky-shade: #3B9DBF;
       --tb-grape: #A57FDE;
-      --tb-grape-shade: #7E58B8;
-      --tb-bubblegum: #F387B7;
-      --tb-bubblegum-shade: #CC5E90;
       
       /* Toybox Shadows & Borders */
       --tb-stroke: 3px solid var(--tb-ink);
@@ -63,7 +54,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2.5rem 1rem;
+      padding: 2rem 1rem;
       overflow-x: hidden;
     }
 
@@ -71,37 +62,29 @@
     .toy-wrapper {
       max-width: 860px;
       width: 100%;
-      position: relative;
-    }
-
-    /* Floating Stickers Decorative Elements */
-    .sticker-float {
-      position: absolute;
-      z-index: 10;
-      user-select: none;
-      pointer-events: none;
-      animation: floatMotion 4s ease-in-out infinite alternate;
-    }
-
-    .sticker-1 { top: -25px; left: -25px; transform: rotate(-12deg); }
-    .sticker-2 { top: 40px; right: -30px; transform: rotate(15deg); animation-delay: -1.5s; }
-    .sticker-3 { bottom: -20px; left: -20px; transform: rotate(8deg); animation-delay: -2.5s; }
-
-    @keyframes floatMotion {
-      0% { transform: translateY(0px) rotate(-8deg); }
-      100% { transform: translateY(-10px) rotate(4deg); }
     }
 
     .toy-hero-card {
       background: var(--tb-cloud);
       border: var(--tb-stroke);
-      border-radius: 28px;
+      border-radius: 24px;
       padding: 3rem 2.5rem;
       box-shadow: var(--tb-shadow-card);
       position: relative;
     }
 
-    /* Header & Titles */
+    /* Top Navigation Bar */
+    .toy-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid var(--tb-ink-faint);
+    }
+
     .dev-badge {
       display: inline-flex;
       align-items: center;
@@ -114,10 +97,35 @@
       font-size: 0.95rem;
       font-weight: 700;
       color: var(--tb-ink);
-      margin-bottom: 1.25rem;
-      transform: rotate(-2deg);
     }
 
+    .toy-nav-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--tb-ink);
+      text-decoration: none;
+      padding: 0.4rem 0.9rem;
+      background: var(--tb-paper);
+      border: 2px solid var(--tb-ink);
+      border-radius: 12px;
+      box-shadow: 2px 2px 0px var(--tb-ink);
+      transition: all 0.1s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--tb-lemon);
+      transform: translate(-1px, -1px);
+      box-shadow: 3px 3px 0px var(--tb-ink);
+    }
+
+    /* Main Title & Subtitle */
     h1.hero-title {
       font-size: 2.75rem;
       font-weight: 700;
@@ -133,7 +141,6 @@
       border: 2px solid var(--tb-ink);
       box-shadow: 3px 3px 0px var(--tb-ink);
       display: inline-block;
-      transform: rotate(1deg);
     }
 
     p.subtitle {
@@ -149,11 +156,10 @@
     .game-sticker-box {
       background: var(--tb-paper);
       border: var(--tb-stroke);
-      border-radius: 24px;
+      border-radius: 20px;
       padding: 2rem;
       box-shadow: 4px 4px 0px var(--tb-ink);
-      margin-bottom: 2.5rem;
-      position: relative;
+      margin-bottom: 2rem;
     }
 
     .game-header {
@@ -198,13 +204,13 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 0.85rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .feat-card {
       background: var(--tb-cloud);
       border: 2px solid var(--tb-ink);
-      border-radius: 16px;
+      border-radius: 14px;
       padding: 0.85rem 1rem;
       box-shadow: 3px 3px 0px var(--tb-ink);
       display: flex;
@@ -241,6 +247,11 @@
       user-select: none;
     }
 
+    a.toy-btn-green {
+      background: var(--tb-grass);
+      color: var(--tb-white);
+    }
+
     a.toy-btn-sun {
       background: var(--tb-sun);
       color: var(--tb-ink);
@@ -269,11 +280,24 @@
     /* Footer */
     footer.toy-footer {
       margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--tb-ink-faint);
       text-align: center;
       font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       color: var(--tb-ink-muted);
       font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     footer.toy-footer a {
@@ -287,30 +311,27 @@
       .toy-hero-card { padding: 2rem 1.5rem; }
       h1.hero-title { font-size: 2rem; }
       .game-sticker-box { padding: 1.25rem; }
-      .sticker-float { display: none; }
     }
   </style>
 </head>
 <body>
 
   <div class="toy-wrapper">
-    <!-- Decorative Toybox Stickers -->
-    <div class="sticker-float sticker-1">
-      <span style="font-size: 2.8rem;">🎲</span>
-    </div>
-    <div class="sticker-float sticker-2">
-      <span style="font-size: 2.8rem;">🎯</span>
-    </div>
-    <div class="sticker-float sticker-3">
-      <span style="font-size: 2.8rem;">🏆</span>
-    </div>
-
     <!-- Main ToyCard Container -->
     <div class="toy-hero-card">
       
-      <div class="dev-badge">
-        <span>✨ Developer Portal</span>
-      </div>
+      <!-- Top Navigation -->
+      <nav class="toy-nav">
+        <div class="dev-badge">
+          <span>✨ Developer Portal</span>
+        </div>
+        <div class="toy-nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+          <a href="app-ads.txt" class="nav-link">app-ads.txt</a>
+          <a href="https://github.com/tarikab7" target="_blank" rel="noopener" class="nav-link">GitHub Profile ↗</a>
+        </div>
+      </nav>
 
       <h1 class="hero-title">
         Seyhan Tarik Akgöz <br>
@@ -321,7 +342,7 @@
         Creating tactile, high-performance offline P2P multiplayer minigames with real-time audio modulation and playful Toybox aesthetics.
       </p>
 
-      <!-- Featured App Sticker Card -->
+      <!-- Featured App Card -->
       <div class="game-sticker-box">
         <div class="game-header">
           <div class="game-title">
@@ -342,19 +363,33 @@
           <div class="feat-card"><span class="feat-icon">🏆</span> Gamified Solo & P2P Stats</div>
         </div>
 
-        <!-- Buttons -->
+        <!-- Action Buttons -->
         <div class="toy-btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.tarik.multiminigames" target="_blank" rel="noopener" class="toy-btn toy-btn-green">
+            <span>▶</span> Get it on Google Play
+          </a>
           <a href="privacy-policy.html" class="toy-btn toy-btn-sun">
             <span>🔒</span> Privacy Policy
           </a>
           <a href="app-ads.txt" class="toy-btn toy-btn-cloud">
             <span>📄</span> app-ads.txt
           </a>
+          <a href="https://github.com/tarikab7/Multi-Minigames" target="_blank" rel="noopener" class="toy-btn toy-btn-blue">
+            <span>💻</span> Source Repository
+          </a>
         </div>
       </div>
 
+      <!-- Footer -->
       <footer class="toy-footer">
-        <p>© 2026 Seyhan Tarik Akgöz &bull; Contact: <a href="mailto:studio@tarikakgoz.com">studio@tarikakgoz.com</a></p>
+        <div class="footer-links">
+          <a href="index.html">Home</a> &bull;
+          <a href="privacy-policy.html">Privacy Policy</a> &bull;
+          <a href="app-ads.txt">app-ads.txt</a> &bull;
+          <a href="https://github.com/tarikab7" target="_blank" rel="noopener">GitHub</a> &bull;
+          <a href="mailto:studio@tarikakgoz.com">Contact Developer</a>
+        </div>
+        <p>© 2026 Seyhan Tarik Akgöz &bull; Email: studio@tarikakgoz.com</p>
       </footer>
 
     </div>
