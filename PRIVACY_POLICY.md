@@ -1,6 +1,6 @@
 # Privacy Policy for Multi-Minigames: 1v1 Offline Battles
 
-**Last Updated:** May 31, 2026
+**Last Updated:** August 27, 2026
 
 This Privacy Policy describes how we collect, use, process, and protect your information when you download, install, and use the mobile application "Multi-Minigames: 1v1 Offline Battles" ("the App").
 
@@ -22,12 +22,20 @@ To facilitate real-time multiplayer functionality without internet dependency, t
 *   **Nearby Connections API:** To discover and connect to nearby devices, the App uses Google's Nearby Connections API. This requires local device permissions for Bluetooth, Wi-Fi, and Location (which is required by the Android operating system to perform local radio scans).
     *   *Storage & Processing:* Connection information and player names are shared locally between matching devices only. This data is handled in memory on-device and is never transmitted to us or stored externally.
 
-#### B. Data Processed by Third-Party Services (Advertising & Diagnostics)
+#### B. Voluntary In-App Feedback & Bug Reports (Google Cloud Firestore)
+The App includes an in-app feedback and bug reporting tool located in the Settings menu.
+*   **Voluntary Submission:** Feedback submission is entirely optional. When you choose to submit a report, the App transmits your user-entered title and description to our secure Google Cloud Firestore database (`feedback` collection).
+*   **Optional Diagnostic Logs:** If you choose to keep the "Attach device diagnostics" option enabled, the report will also include general device technical metadata (device model, Android OS version, app version code, total memory) and the last several application event log breadcrumbs (e.g., UI screen navigation, match start/end events, error tags).
+*   **No Personal Identifiers:** We do not request or store your name, email address, phone number, contacts, or passwords in feedback submissions.
+*   **Purpose:** This data is used exclusively to diagnose technical issues, fix software bugs, and improve gameplay features.
+
+#### C. Data Processed by Third-Party Services (Advertising, Analytics & Crash Reporting)
 To support the ongoing development, performance optimization, and monetization of the App, we integrate secure third-party services provided by Google:
 *   **Google AdMob:** AdMob may collect and process device-level identifiers (such as the Android Advertising ID), cookies, IP addresses, and interaction history with ads for analytics and targeting.
-*   **Google Firebase (Analytics & Crashlytics):** To monitor and improve App stability, performance, and user engagement, we utilize the Google Firebase SDK. 
+*   **Google Firebase & Cloud Firestore:** To monitor and improve App stability, performance, and user engagement, we utilize the Google Firebase SDK:
     *   *Firebase Crashlytics:* Automatically collects anonymous crash reports, stack traces, and device telemetry (such as device model, OS version, RAM capacity, and battery level) whenever the App crashes in the wild.
     *   *Firebase Analytics:* Collects anonymous, aggregated usage statistics (such as screen transitions, active game sessions, and feature engagement metrics). This data contains no personally identifiable information (PII).
+    *   *Cloud Firestore:* Securely stores user-submitted bug reports and feedback as described in Section 2.B. All transmissions are encrypted in transit via HTTPS/TLS.
 *   **Consent Management (UMP SDK):** For users residing in the European Economic Area (EEA), the United Kingdom, and other regulated regions, we implement the Google User Messaging Platform (UMP) SDK. Upon the first launch of the App, you will be presented with an interactive consent panel allowing you to choose whether to accept personalized advertising.
 
 To learn more about how Google handles and protects your data, please review: [Google's Privacy & Terms](https://policies.google.com/technologies/partner-sites).

@@ -1,6 +1,6 @@
 # Terms and Conditions for Multi-Minigames: 1v1 Offline Battles
 
-**Last Updated:** May 31, 2026
+**Last Updated:** August 27, 2026
 
 By downloading, installing, or using "Multi-Minigames: 1v1 Offline Battles" ("the App"), these terms automatically apply to you. Please read them carefully before using the App. 
 
@@ -27,14 +27,15 @@ We are committed to keeping the App as useful and entertaining as possible. For 
 
 ---
 
-### 4. User Conduct
-The App provides real-time local communication features, including localized text chat and P2P voice messages. You agree to use these communication systems responsibly.
-*   **Prohibited Activities:** You must not transmit, share, or record any audio or text content that:
+### 4. User Conduct & In-App Submissions
+The App provides real-time local communication features (localized chat, P2P voice messages) and an in-app feedback/bug submission system. You agree to use these features responsibly.
+*   **Prohibited Activities:** You must not transmit, share, record, or submit any content or feedback that:
     *   Is defamatory, abusive, harassing, threatening, or invasive of another person's privacy.
     *   Contains hate speech, explicit content, or promotes discrimination based on race, gender, religion, nationality, or sexual orientation.
     *   Infringes upon any third-party intellectual property or privacy rights.
     *   Is unlawful or promotes illegal activities.
-*   **Right of Access:** While we do not monitor or store P2P data (it remains offline and peer-to-peer), users who engage in abusive behaviors in localized multiplayer environments risk losing access to the App or having their device connections blocked by their opponents.
+*   **Feedback License:** When you voluntarily submit feedback, suggestions, or bug reports through the App, you grant us a perpetual, royalty-free license to use, modify, and incorporate your ideas and suggestions into future updates of the App without any obligation of compensation.
+*   **Right of Access:** While we do not monitor or store P2P data (it remains offline and peer-to-peer), users who engage in abusive behaviors in localized multiplayer environments risk having their device connections blocked by their opponents.
 
 ---
 
