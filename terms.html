@@ -149,8 +149,8 @@
   </div>
 
   <script>
-    // Fetch TERMS_AND_CONDITIONS.md with cache buster Date.now()
-    fetch('TERMS_AND_CONDITIONS.md?v=' + Date.now())
+    // Fetch TERMS_AND_CONDITIONS.md
+    fetch('TERMS_AND_CONDITIONS.md')
       .then(response => {
         if (!response.ok) throw new Error('File not found');
         return response.text();
