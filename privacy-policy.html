@@ -149,8 +149,8 @@
   </div>
 
   <script>
-    // Fetch PRIVACY_POLICY.md with cache buster Date.now()
-    fetch('PRIVACY_POLICY.md?v=' + Date.now())
+    // Fetch PRIVACY_POLICY.md
+    fetch('PRIVACY_POLICY.md')
       .then(response => {
         if (!response.ok) throw new Error('File not found');
         return response.text();
