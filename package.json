@@ -1,0 +1,17 @@
+{
+  "name": "tarikab7.github.io",
+  "version": "1.0.0",
+  "description": "Developer website hosting app-ads.txt and privacy policy",
+  "main": "index.html",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarikab7/tarikab7.github.io.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}
