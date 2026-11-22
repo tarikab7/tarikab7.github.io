@@ -1,6 +1,6 @@
 # Terms and Conditions for Multi-Minigames: 1v1 Offline Battles
 
-**Last Updated:** August 27, 2026
+**Last Updated:** November 22, 2026
 
 By downloading, installing, or using "Multi-Minigames: 1v1 Offline Battles" ("the App"), these terms automatically apply to you. Please read them carefully before using the App. 
 
@@ -28,17 +28,26 @@ We are committed to keeping the App as useful and entertaining as possible. For 
 ---
 
 ### 4. User Conduct & In-App Submissions
-The App provides real-time local communication features (localized chat, P2P voice messages). You agree to use these features responsibly.
+The App provides real-time local communication features (localized chat, P2P voice messages) and shows your player name and profile picture to other players, including on the friends leaderboard. You agree to use these features responsibly.
 *   **Prohibited Activities:** You must not transmit, share, or record any content that:
     *   Is defamatory, abusive, harassing, threatening, or invasive of another person's privacy.
     *   Contains hate speech, explicit content, or promotes discrimination based on race, gender, religion, nationality, or sexual orientation.
     *   Infringes upon any third-party intellectual property or privacy rights.
     *   Is unlawful or promotes illegal activities.
+*   **Names and Pictures:** Your player name and profile picture must not contain any of the content listed above, because they are shown to other players and can spread to other phones through the friends leaderboard.
+*   **Fair Play:** You must not modify the App or its data to fake results or leaderboard entries. Leaderboard cards that fail the App's checks are rejected.
 *   **Right of Access:** While we do not monitor or store P2P data (it remains offline and peer-to-peer), users who engage in abusive behaviors in localized multiplayer environments risk having their device connections blocked by their opponents.
 
 ---
 
-### 5. Third-Party Services
+### 5. Friends Leaderboard
+The App includes a friends leaderboard that works without a server. When phones running the App connect, they exchange signed leaderboard cards (player name, a small profile picture, a pseudonymous player ID and game statistics) and pass them on to other phones they connect to later. Details are in the Privacy Policy.
+*   **Informal Rankings:** Rankings only include the cards your phone has received. They may be incomplete or out of date, and we do not guarantee their accuracy.
+*   **Opting Out:** You can turn off "Share on friends leaderboard" in Settings. Your phone then publishes a removal notice that replaces your card as it spreads, but copies already passed to other phones cannot be recalled. You can hide any player on your own phone.
+
+---
+
+### 6. Third-Party Services
 The App integrates with third-party service providers who maintain their own Terms and Conditions. By using the App, you also agree to be bound by the terms of these services:
 *   [Google Play Services Terms](https://policies.google.com/terms)
 *   [Google AdMob Terms](https://developers.google.com/admob/terms)
@@ -46,30 +55,30 @@ The App integrates with third-party service providers who maintain their own Ter
 
 ---
 
-### 6. Limitation of Liability
+### 7. Limitation of Liability
 The App is provided on an "as is" and "as available" basis. To the maximum extent permitted by applicable law:
 *   Seyhan Tarik Akgöz accepts no liability for any direct, indirect, incidental, or consequential damages or losses resulting from your use of the App, network dropouts, or temporary inability to connect to another device.
 *   We rely on Google Play Services and system API performance (such as Bluetooth and Wi-Fi drivers) to maintain functional multiplayer connections and accept no responsibility for errors or service disruptions caused by these third-party systems.
 
 ---
 
-### 7. Updates & Support
+### 8. Updates & Support
 We may update the App periodically to introduce new features, resolve bugs, or maintain compatibility with new Android operating system versions.
 *   **Acceptance of Updates:** To ensure seamless gameplay, you agree to download and install updates as they become available.
 *   **Compatibility:** We do not guarantee that the App will always be updated to support the specific version of Android installed on your device.
 
 ---
 
-### 8. Governing Law
+### 9. Governing Law
 These Terms and Conditions, and any dispute arising out of or in connection with them, shall be governed by and construed in accordance with the laws of the developer's country of residence (Turkey), without regard to its conflict of law provisions.
 
 ---
 
-### 9. Changes to These Terms
+### 10. Changes to These Terms
 We may update our Terms and Conditions from time to time. You are advised to review this page periodically. We will notify you of any changes by posting the revised terms on this page and updating the "Last Updated" date.
 
 ---
 
-### 10. Contact Us
+### 11. Contact Us
 If you have any questions or suggestions regarding these Terms and Conditions, please do not hesitate to contact us at:
 *   **Email:** studio@tarikakgoz.com

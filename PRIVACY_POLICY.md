@@ -1,6 +1,6 @@
 # Privacy Policy for Multi-Minigames: 1v1 Offline Battles
 
-**Last Updated:** August 27, 2026
+**Last Updated:** November 22, 2026
 
 This Privacy Policy describes how we collect, use, process, and protect your information when you download, install, and use the mobile application "Multi-Minigames: 1v1 Offline Battles" ("the App").
 
@@ -20,9 +20,18 @@ To facilitate real-time multiplayer functionality without internet dependency, t
 *   **Local Microphone (RECORD_AUDIO):** The App uses your device's microphone to allow recording and sending voice messages to your opponent during local P2P matches. 
     *   *Storage & Processing:* Audio recordings are encoded, processed locally on-device, and transmitted directly to the other player via P2P. We **do not** store, listen to, or transmit your voice data to any external developer-owned or third-party servers.
 *   **Nearby Connections API:** To discover and connect to nearby devices, the App uses Google's Nearby Connections API. This requires local device permissions for Bluetooth, Wi-Fi, and Location (which is required by the Android operating system to perform local radio scans).
-    *   *Storage & Processing:* Connection information and player names are shared locally between matching devices only. This data is handled in memory on-device and is never transmitted to us or stored externally.
+    *   *Shared with the players you connect to:* your player name, your profile picture (if you set one), a premium flag and a pseudonymous player ID (see section B). This data goes directly to the other device and is never transmitted to us.
+*   **Match History on Your Device:** The App stores the names, profile pictures and player IDs of the opponents you have played, and your match history with them (game, result, score, date), in the App's private storage on your device, so it can show your history and statistics. This data stays on your device and is deleted when you uninstall the App.
 
-#### B. Data Processed by Third-Party Services (Advertising, Analytics & Crash Reporting)
+#### B. Friends Leaderboard
+The App shows how you rank among the players your phone knows about. It works without any server:
+*   **What is shared:** a "leaderboard card" with your player name, a small version of your profile picture (if you set one), your pseudonymous player ID, and your game statistics: wins, losses and draws against real players, win streaks, best scores, biggest win margins (including the opponent's name and player ID at the time), game ratings, and when the card was last updated.
+*   **How it spreads:** when your phone connects to another phone running the App, the two exchange leaderboard cards in the background. Phones also pass on cards they received earlier, so your card can reach any phone in that chain, including players you have never met. Each card is signed on your device so other phones can check that it has not been altered.
+*   **Player ID:** the ID is derived from a cryptographic key created on your device. It stays the same when you reinstall the App on the same device, and when you restore an Android backup on a new device. It does not contain your device's hardware identifiers, and your Android device ID never leaves your device.
+*   **Storage:** each phone keeps up to 5,000 cards in the App's private storage. Cards are not sent to us or to any server, and we cannot access them. Your key and your own card are included in Android's backup (your Google account backup), if you have backup turned on, so your ID and statistics can be restored.
+*   **Your choices:** you can turn off "Share on friends leaderboard" in Settings at any time. Your phone then publishes a signed removal notice that replaces your card as it spreads. Copies already passed to other phones cannot be recalled or deleted by us, and a phone that never connects again keeps the copy it has. Cards that have not been updated for 180 days are no longer shown in rankings. You can also hide any player on your own phone.
+
+#### C. Data Processed by Third-Party Services (Advertising, Analytics & Crash Reporting)
 To support the ongoing development, performance optimization, and monetization of the App, we integrate secure third-party services provided by Google:
 *   **Google AdMob:** AdMob may collect and process device-level identifiers (such as the Android Advertising ID), cookies, IP addresses, and interaction history with ads for analytics and targeting.
 *   **Google Firebase:** To monitor and improve App stability, performance, and user engagement, we utilize the Google Firebase SDK:
@@ -38,13 +47,14 @@ To learn more about how Google handles and protects your data, please review: [G
 If you reside in the European Economic Area (EEA) or the United Kingdom, we process any personal data under the following legal bases of the General Data Protection Regulation (GDPR):
 *   **Consent (Art. 6(1)(a) GDPR):** For the serving of personalized advertisements through Google AdMob, where you have explicitly opted in via our consent dialog. You have the right to withdraw this consent at any time.
 *   **Performance of a Contract (Art. 6(1)(b) GDPR):** For establishing and maintaining local P2P matches (e.g., audio and device connection transmissions) that you request when initiating a local game.
-*   **Legitimate Interests (Art. 6(1)(f) GDPR):** For rendering basic, non-personalized ads, analyzing anonymized usage diagnostics, and preventing fraudulent billing practices.
+*   **Legitimate Interests (Art. 6(1)(f) GDPR):** For rendering basic, non-personalized ads, analyzing anonymized usage diagnostics, and preventing fraudulent billing practices, and for the friends leaderboard, which you can turn off at any time in Settings.
 
 ---
 
 ### 4. California Privacy Rights (CCPA / CPRA Compliance)
 If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the CPRA, grants you specific rights:
 *   **Categories of Information Collected:** In the preceding 12 months, third-party services integrated within the App (Google AdMob) may have collected identifiers (e.g., IP address, device ad ID) and internet/electronic network activity.
+*   **Leaderboard:** your player name, profile picture, player ID and game statistics are shared with other players' devices to provide the friends leaderboard (see section 2B). We do not receive or sell this data.
 *   **Sale or Sharing of Personal Information:** We do not directly sell your personal data. However, sharing device identifiers with advertising networks for personalized advertising may be classified as a "sale" or "sharing" under California law. 
 *   **Opt-Out Right:** You can opt-out of personalized tracking at any time by accessing the in-app privacy settings form, or by utilizing device-level privacy settings (such as enabling "Opt out of Ads Personalization" or "Delete Advertising ID" on your Android device).
 
@@ -54,7 +64,7 @@ If you are a California resident, the California Consumer Privacy Act (CCPA), as
 Depending on your geographical location (e.g., GDPR/CCPA jurisdictions), you hold the following rights:
 *   **Right of Access & Portability:** Request details about the data we or our partners collect.
 *   **Right to Rectification:** Request corrections to inaccurate information.
-*   **Right to Erasure ("Right to be Forgotten"):** Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete).
+*   **Right to Erasure ("Right to be Forgotten"):** Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete. Leaderboard cards live on other players' phones, which we cannot access; use the "Share on friends leaderboard" switch to publish a removal notice).
 *   **Right to Withdraw Consent:** Revoke your ad-tracking consent at any time via the UMP consent form in the App settings.
 *   **Right to Lodge a Complaint:** You have the right to contact or lodge a complaint with your local Data Protection Authority.
 
