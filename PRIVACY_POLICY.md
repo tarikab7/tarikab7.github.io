@@ -22,6 +22,8 @@ To facilitate real-time multiplayer functionality without internet dependency, t
 *   **Nearby Connections API:** To discover and connect to nearby devices, the App uses Google's Nearby Connections API. This requires local device permissions for Bluetooth, Wi-Fi, and Location (which is required by the Android operating system to perform local radio scans).
     *   *Shared with the players you connect to:* your player name, your profile picture (if you set one), a premium flag and a pseudonymous player ID (see section B). This data goes directly to the other device and is never transmitted to us.
 *   **Match History on Your Device:** The App stores the names, profile pictures and player IDs of the opponents you have played, and your match history with them (game, result, score, date), in the App's private storage on your device, so it can show your history and statistics. This data stays on your device and is deleted when you uninstall the App.
+*   **Game Statistics & Install Date:** Your match results, high scores and the date the App was first installed are stored only on your device. The install date is used to show no banner ads during your first days with the App.
+*   **Ad Frequency Tuning:** When ads are shown, the App stores on your device a running average of the estimated revenue those ads generated (as reported by the AdMob SDK). Where this feature is enabled, the average may be used to show interstitial ads slightly more or less often. It only affects how often ads appear — never gameplay, difficulty or results — and it is never sent to us.
 
 #### B. Friends Leaderboard
 The App shows how you rank among the players your phone knows about. It works without any server:
@@ -36,7 +38,8 @@ To support the ongoing development, performance optimization, and monetization o
 *   **Google AdMob:** AdMob may collect and process device-level identifiers (such as the Android Advertising ID), cookies, IP addresses, and interaction history with ads for analytics and targeting.
 *   **Google Firebase:** To monitor and improve App stability, performance, and user engagement, we utilize the Google Firebase SDK:
     *   *Firebase Crashlytics:* Automatically collects anonymous crash reports, stack traces, and device telemetry (such as device model, OS version, RAM capacity, and battery level) whenever the App crashes in the wild.
-    *   *Firebase Analytics:* Collects anonymous, aggregated usage statistics (such as screen transitions, active game sessions, and feature engagement metrics). This data contains no personally identifiable information (PII).
+    *   *Firebase Analytics:* Collects pseudonymous usage statistics (such as screen transitions, active game sessions, feature engagement and ad impressions), linked to a random app-instance identifier rather than your name or contact details.
+    *   *Firebase Remote Config & A/B Testing:* The App downloads ad-pacing settings (such as how often interstitial ads may appear and how long new players see no banner ads) from Google. To deliver these settings, Google uses a random Firebase installation identifier. Different players may receive different settings as part of experiments that measure which settings work best. These settings are limited to safe ranges and never change gameplay.
 *   **Consent Management (UMP SDK):** For users residing in the European Economic Area (EEA), the United Kingdom, and other regulated regions, we implement the Google User Messaging Platform (UMP) SDK. Upon the first launch of the App, you will be presented with an interactive consent panel allowing you to choose whether to accept personalized advertising.
 
 To learn more about how Google handles and protects your data, please review: [Google's Privacy & Terms](https://policies.google.com/technologies/partner-sites).
@@ -47,13 +50,13 @@ To learn more about how Google handles and protects your data, please review: [G
 If you reside in the European Economic Area (EEA) or the United Kingdom, we process any personal data under the following legal bases of the General Data Protection Regulation (GDPR):
 *   **Consent (Art. 6(1)(a) GDPR):** For the serving of personalized advertisements through Google AdMob, where you have explicitly opted in via our consent dialog. You have the right to withdraw this consent at any time.
 *   **Performance of a Contract (Art. 6(1)(b) GDPR):** For establishing and maintaining local P2P matches (e.g., audio and device connection transmissions) that you request when initiating a local game.
-*   **Legitimate Interests (Art. 6(1)(f) GDPR):** For rendering basic, non-personalized ads, analyzing anonymized usage diagnostics, and preventing fraudulent billing practices, and for the friends leaderboard, which you can turn off at any time in Settings.
+*   **Legitimate Interests (Art. 6(1)(f) GDPR):** For rendering basic, non-personalized ads, analyzing pseudonymous usage diagnostics, testing ad-pacing settings, tuning ad frequency on your device, and preventing fraudulent billing practices, and for the friends leaderboard, which you can turn off at any time in Settings. You may object to the ad testing and tuning at any time by contacting us.
 
 ---
 
 ### 4. California Privacy Rights (CCPA / CPRA Compliance)
 If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the CPRA, grants you specific rights:
-*   **Categories of Information Collected:** In the preceding 12 months, third-party services integrated within the App (Google AdMob) may have collected identifiers (e.g., IP address, device ad ID) and internet/electronic network activity.
+*   **Categories of Information Collected:** In the preceding 12 months, third-party services integrated within the App (Google AdMob and Google Firebase) may have collected identifiers (e.g., IP address, device ad ID, app-instance and Firebase installation IDs) and internet/electronic network activity.
 *   **Leaderboard:** your player name, profile picture, player ID and game statistics are shared with other players' devices to provide the friends leaderboard (see section 2B). We do not receive or sell this data.
 *   **Sale or Sharing of Personal Information:** We do not directly sell your personal data. However, sharing device identifiers with advertising networks for personalized advertising may be classified as a "sale" or "sharing" under California law. 
 *   **Opt-Out Right:** You can opt-out of personalized tracking at any time by accessing the in-app privacy settings form, or by utilizing device-level privacy settings (such as enabling "Opt out of Ads Personalization" or "Delete Advertising ID" on your Android device).
@@ -64,7 +67,7 @@ If you are a California resident, the California Consumer Privacy Act (CCPA), as
 Depending on your geographical location (e.g., GDPR/CCPA jurisdictions), you hold the following rights:
 *   **Right of Access & Portability:** Request details about the data we or our partners collect.
 *   **Right to Rectification:** Request corrections to inaccurate information.
-*   **Right to Erasure ("Right to be Forgotten"):** Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete. Leaderboard cards live on other players' phones, which we cannot access; use the "Share on friends leaderboard" switch to publish a removal notice).
+*   **Right to Erasure ("Right to be Forgotten"):** Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete. Leaderboard cards live on other players' phones, which we cannot access; use the "Share on friends leaderboard" switch to publish a removal notice. Data kept on your device, including the ad-revenue average, is removed when you clear the App's data or uninstall it).
 *   **Right to Withdraw Consent:** Revoke your ad-tracking consent at any time via the UMP consent form in the App settings.
 *   **Right to Lodge a Complaint:** You have the right to contact or lodge a complaint with your local Data Protection Authority.
 
