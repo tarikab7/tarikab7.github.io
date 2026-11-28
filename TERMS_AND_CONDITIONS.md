@@ -1,6 +1,6 @@
 # Terms and Conditions for Multi-Minigames: 1v1 Offline Battles
 
-**Last Updated:** November 22, 2026
+**Last Updated:** November 28, 2026
 
 By downloading, installing, or using "Multi-Minigames: 1v1 Offline Battles" ("the App"), these terms automatically apply to you. Please read them carefully before using the App. 
 
@@ -52,6 +52,7 @@ The App integrates with third-party service providers who maintain their own Ter
 *   [Google Play Services Terms](https://policies.google.com/terms)
 *   [Google AdMob Terms](https://developers.google.com/admob/terms)
 *   [Google Firebase Terms](https://firebase.google.com/terms)
+*   [Unity Ads Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy)
 
 ---
 

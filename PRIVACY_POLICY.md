@@ -1,6 +1,6 @@
 # Privacy Policy for Multi-Minigames: 1v1 Offline Battles
 
-**Last Updated:** November 22, 2026
+**Last Updated:** November 28, 2026
 
 This Privacy Policy describes how we collect, use, process, and protect your information when you download, install, and use the mobile application "Multi-Minigames: 1v1 Offline Battles" ("the App").
 
@@ -34,29 +34,30 @@ The App shows how you rank among the players your phone knows about. It works wi
 *   **Your choices:** you can turn off "Share on friends leaderboard" in Settings at any time. Your phone then publishes a signed removal notice that replaces your card as it spreads. Copies already passed to other phones cannot be recalled or deleted by us, and a phone that never connects again keeps the copy it has. Cards that have not been updated for 180 days are no longer shown in rankings. You can also hide any player on your own phone.
 
 #### C. Data Processed by Third-Party Services (Advertising, Analytics & Crash Reporting)
-To support the ongoing development, performance optimization, and monetization of the App, we integrate secure third-party services provided by Google:
+To support the ongoing development, performance optimization, and monetization of the App, we integrate secure third-party services provided by Google and Unity:
 *   **Google AdMob:** AdMob may collect and process device-level identifiers (such as the Android Advertising ID), cookies, IP addresses, and interaction history with ads for analytics and targeting.
+*   **Unity Ads (via AdMob mediation):** Some ads are delivered by Unity Ads through Google AdMob. Unity and its advertising partners may collect device data and identifiers (such as the Android Advertising ID), IP address and ad-interaction data to show, measure and (where you consent) personalize ads. See [Unity's Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy).
 *   **Google Firebase:** To monitor and improve App stability, performance, and user engagement, we utilize the Google Firebase SDK:
     *   *Firebase Crashlytics:* Automatically collects anonymous crash reports, stack traces, and device telemetry (such as device model, OS version, RAM capacity, and battery level) whenever the App crashes in the wild.
     *   *Firebase Analytics:* Collects pseudonymous usage statistics (such as screen transitions, active game sessions, feature engagement and ad impressions), linked to a random app-instance identifier rather than your name or contact details.
     *   *Firebase Remote Config & A/B Testing:* The App downloads ad-pacing settings (such as how often interstitial ads may appear and how long new players see no banner ads) from Google. To deliver these settings, Google uses a random Firebase installation identifier. Different players may receive different settings as part of experiments that measure which settings work best. These settings are limited to safe ranges and never change gameplay.
-*   **Consent Management (UMP SDK):** For users residing in the European Economic Area (EEA), the United Kingdom, and other regulated regions, we implement the Google User Messaging Platform (UMP) SDK. Upon the first launch of the App, you will be presented with an interactive consent panel allowing you to choose whether to accept personalized advertising.
+*   **Consent Management (UMP SDK):** For users residing in the European Economic Area (EEA), the United Kingdom, and other regulated regions, we implement the Google User Messaging Platform (UMP) SDK. Upon the first launch of the App, you will be presented with a single interactive consent panel allowing you to choose whether to accept personalized advertising. Your choice applies to Google and its ad partners, including Unity Ads, so you are not asked again before each ad.
 
-To learn more about how Google handles and protects your data, please review: [Google's Privacy & Terms](https://policies.google.com/technologies/partner-sites).
+To learn more about how Google handles and protects your data, please review: [Google's Privacy & Terms](https://policies.google.com/technologies/partner-sites). For Unity, see [Unity's Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy).
 
 ---
 
 ### 3. Legal Bases for Processing (GDPR Compliance)
 If you reside in the European Economic Area (EEA) or the United Kingdom, we process any personal data under the following legal bases of the General Data Protection Regulation (GDPR):
-*   **Consent (Art. 6(1)(a) GDPR):** For the serving of personalized advertisements through Google AdMob, where you have explicitly opted in via our consent dialog. You have the right to withdraw this consent at any time.
+*   **Consent (Art. 6(1)(a) GDPR):** For the serving of personalized advertisements through Google AdMob and its mediation partner Unity Ads, where you have explicitly opted in via our consent dialog. You have the right to withdraw this consent at any time.
 *   **Performance of a Contract (Art. 6(1)(b) GDPR):** For establishing and maintaining local P2P matches (e.g., audio and device connection transmissions) that you request when initiating a local game.
-*   **Legitimate Interests (Art. 6(1)(f) GDPR):** For rendering basic, non-personalized ads, analyzing pseudonymous usage diagnostics, testing ad-pacing settings, tuning ad frequency on your device, and preventing fraudulent billing practices, and for the friends leaderboard, which you can turn off at any time in Settings. You may object to the ad testing and tuning at any time by contacting us.
+*   **Legitimate Interests (Art. 6(1)(f) GDPR):** For rendering basic, non-personalized ads, analyzing pseudonymous usage diagnostics, testing ad-pacing settings, tuning ad frequency on your device, preventing fraudulent billing practices, and for the friends leaderboard, which you can turn off at any time in Settings. You may object to this processing at any time by contacting us.
 
 ---
 
 ### 4. California Privacy Rights (CCPA / CPRA Compliance)
 If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the CPRA, grants you specific rights:
-*   **Categories of Information Collected:** In the preceding 12 months, third-party services integrated within the App (Google AdMob and Google Firebase) may have collected identifiers (e.g., IP address, device ad ID, app-instance and Firebase installation IDs) and internet/electronic network activity.
+*   **Categories of Information Collected:** In the preceding 12 months, third-party services integrated within the App (Google AdMob, Unity Ads and Google Firebase) may have collected identifiers (e.g., IP address, device ad ID, app-instance and Firebase installation IDs) and internet/electronic network activity.
 *   **Leaderboard:** your player name, profile picture, player ID and game statistics are shared with other players' devices to provide the friends leaderboard (see section 2B). We do not receive or sell this data.
 *   **Sale or Sharing of Personal Information:** We do not directly sell your personal data. However, sharing device identifiers with advertising networks for personalized advertising may be classified as a "sale" or "sharing" under California law. 
 *   **Opt-Out Right:** You can opt-out of personalized tracking at any time by accessing the in-app privacy settings form, or by utilizing device-level privacy settings (such as enabling "Opt out of Ads Personalization" or "Delete Advertising ID" on your Android device).
@@ -67,7 +68,7 @@ If you are a California resident, the California Consumer Privacy Act (CCPA), as
 Depending on your geographical location (e.g., GDPR/CCPA jurisdictions), you hold the following rights:
 *   **Right of Access & Portability:** Request details about the data we or our partners collect.
 *   **Right to Rectification:** Request corrections to inaccurate information.
-*   **Right to Erasure ("Right to be Forgotten"):** Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete. Leaderboard cards live on other players' phones, which we cannot access; use the "Share on friends leaderboard" switch to publish a removal notice. Data kept on your device, including the ad-revenue average, is removed when you clear the App's data or uninstall it).
+*   **Right to Erasure ("Right to be Forgotten"):** Request deletion of data. (Note: Because we do not store your personal data on any servers, we hold no active user accounts or data files to delete. Data kept on your device, including the ad-revenue average, is removed when you clear the App's data or uninstall it. Leaderboard cards live on other players' phones, which we cannot access; use the "Share on friends leaderboard" switch to publish a removal notice).
 *   **Right to Withdraw Consent:** Revoke your ad-tracking consent at any time via the UMP consent form in the App settings.
 *   **Right to Lodge a Complaint:** You have the right to contact or lodge a complaint with your local Data Protection Authority.
 
